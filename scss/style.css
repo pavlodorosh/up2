@@ -1,0 +1,137 @@
+.grid-container-template-areas {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'header header header header header' '. . . . .' 'menu . content . sidebar' '. . . . .' 'footer footer footer footer footer';
+  -ms-grid-columns: 130px 5px 1fr 5px 130px;
+      grid-template-columns: 130px 5px 1fr 5px 130px;
+  -ms-grid-rows: 90px 5px 1fr 5px 90px;
+      grid-template-rows: 90px 5px 1fr 5px 90px;
+}
+
+.grid-container-template-areas .header {
+  background: #03A9F4;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: header;
+  position: relative;
+  font-size: 18px;
+  color: #000;
+}
+
+.grid-container-template-areas .content {
+  background-color: #FFC107;
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: content;
+  position: relative;
+  font-size: 18px;
+  color: #000;
+}
+
+.grid-container-template-areas .menu {
+  background-color: #000;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: menu;
+  position: relative;
+  font-size: 18px;
+  color: #000;
+}
+
+.grid-container-template-areas .sidebar {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+  grid-area: sidebar;
+  background-color: #8BC34A;
+  position: relative;
+  font-size: 18px;
+  color: #000;
+}
+
+.grid-container-template-areas .footer {
+  background-color: #9C27B0;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: footer;
+  background-color: blue;
+  position: relative;
+  font-size: 18px;
+  color: #000;
+  font-size: 16px;
+}
+
+@media (max-width: 575.98px) {
+  .grid-container-template-areas .footer {
+    border: 2px solid;
+  }
+}
+
+.grid-container-template-areas .grid-item.color_1 {
+  background-color: #673ab7;
+}
+
+.grid-container-template-areas .grid-item.color_2 {
+  background-color: #4caf50;
+}
+
+.grid-container-template-areas .grid-item.color_3 {
+  background-color: #e9a81e;
+}
+
+.grid-container-template-areas .grid-item.color_4 {
+  background-color: #e91e63;
+}
+
+.grid-container-template-areas .grid-item:hover {
+  border-bottom: 3px solid;
+}
+
+@media (max-width: 575.98px) {
+  .grid-container-template-areas .grid-item {
+    border: 2px solid;
+  }
+}
+
+.grid-container-template-areas .grid-item-element {
+  background-color: #673ab7;
+}
+
+.grid-container-template-areas .grid-item-element-mod {
+  background-color: #e91e63;
+}
+
+.grid-container-template-areas .element-5 {
+  width: 1500px;
+}
+
+.grid-container-template-areas .element-4 {
+  width: 1200px;
+}
+
+.grid-container-template-areas .element-3 {
+  width: 900px;
+}
+
+.grid-container-template-areas .element-2 {
+  width: 600px;
+}
+
+.grid-container-template-areas .element-1 {
+  width: 300px;
+}
+
+.block-name {
+  position: relative;
+}
+
+.block-name_elem-name {
+  position: relative;
+}
+
+.block-name_elem-name__mod-name {
+  position: relative;
+}
+/*# sourceMappingURL=style.css.map */

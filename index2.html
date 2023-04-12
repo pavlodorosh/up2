@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="GET">
+        <fieldset>
+            <div>
+                <label for="name">Вкажіть ім'я</label>
+                <input type="text" id="name" placeholder="Вкажіть ім'я">
+            </div>
+            <div>
+                <label for="name">Вкажіть прізвище</label>
+                <input type="text" id="name" placeholder="Вкажіть прізвище">
+            </div>
+        </fieldset>
+
+        <div>
+            <label for="name">Вкажіть пароль</label>
+            <input type="password" id="name" placeholder="Вкажіть пароль" required>
+        </div>
+
+        <div>
+            <label for="old">Вкажіть ваш вік</label>
+            <input type="number" id="old" min="0" max="199">
+        </div>
+
+        <div>
+            <label for="time_strahovka">Виберіть тривалість страховки в місяцях</label>
+            <input type="range" id="time_strahovka" min="0" max="12" step="1" value="0">
+        </div>
+
+        <div>
+            <label for="date_strahovka">Вкажіть дату почату страхового полісу</label>
+            <input type="date" id="date_strahovka">
+        </div>
+
+        <div>
+            <label for="slect_color">Виберіть колір авто</label>
+            <input type="color" id="slect_color">
+        </div>
+
+        <div>
+            <label for="hidden_block">Виберіть колір авто</label>
+            <input type="hidden" id="hidden_block">
+        </div>
+
+        <div>
+            <label for="file">Додайте водійські права сторона 1</label>
+            <input type="file">
+        </div>
+
+        <div>
+            <label for="file">Додайте водійські права сторона 2</label>
+            <input type="file">
+        </div>
+
+        <div>
+            <label for="file">Прикріпіть фото технічого паспорта з двох сторін</label>
+            <input type="file" multiple>
+        </div>
+
+        <legend>Про авто</legend>
+
+        <div>
+            <label for="type_fuel">Вид палива</label>
+            <input type="text" name="type_fuel" list="list_fuel">
+            <datalist id="list_fuel">
+                <option>Газ</option>
+                <option>Бензин</option>
+                <option>Дизель</option>
+                <option>Гібрид</option>
+                <option>Електро</option>
+            </datalist>
+        </div>
+
+        <div>
+            <p>Тип кузова</p>
+            <input type="radio" id="type1" value="Сидан" name="type_car">
+            <label for="type1">Сидан</label>
+
+            <input type="radio" id="type2" value="Универсал" name="type_car">
+            <label for="type2">Универсал</label>
+
+            <input type="radio" id="type3" value="Хачбек" name="type_car">
+            <label for="type3">Хачбек</label>
+
+            <input type="radio" id="type4" value="Купе" name="type_car" checked>
+            <label for="type4">Купе</label>
+
+            <input type="radio" id="type5" value="Кросовер" name="type_car">
+            <label for="type5">Кросовер</label>
+        </div>
+
+        <div>
+            <p>Ти приводу</p>
+            <select name="" id="">
+                <option value="">Передній</option>
+                <option value="" selected>Задній</option>
+                <option value="">Повний</option>
+            </select>
+        </div>
+        <div>
+            <p>Країна походження</p>
+            <select name="" id="">
+                <optgroup label="Європа">
+                    <option value="">Польща</option>
+                    <option value="">Франція</option>
+                    <option value="">Італія</option>
+                    <option value="">Німеччина</option>
+                    <option value="">Швеція</option>
+                </optgroup>
+                <optgroup label="США">
+                    <option value="">Вашигтон</option>
+                </optgroup>
+
+            </select>
+        </div>
+        <div>
+            <p>Опції авто</p>
+            <div>
+                <input type="checkbox" name="option1" id="option1" value="ABS">
+                <label for="option1">ABS</label>
+
+                <input type="checkbox" name="option2" id="option2" value="LED фари">
+                <label for="option2">LED фари</label>
+
+                <input type="checkbox" name="option3" id="option3" value="Адаптивний криїз">
+                <label for="option3">Адаптивний криїз</label>
+
+                <input type="checkbox" name="option4" id="option4" value="Кондіонер">
+                <label for="option4">Кондіонер</label>
+
+                <input type="checkbox" name="option5" id="option5" value="Клімат">
+                <label for="option5">Клімат</label>
+
+                <input type="checkbox" name="option6" id="option6" value="Камера заднього виду">
+                <label for="option6">Камера заднього виду</label>
+            </div>
+        </div>
+
+        <div>
+            <label for="comment">Коментар</label>
+            <textarea name="" id="comment" cols="30" rows="10"></textarea>
+        </div>
+
+        <div>
+            <input type="reset" value="Очистити форму">
+        </div>
+
+        <div>
+            <input type="submit" value="Відправлення форми">
+        </div>
+        <button type="button">Відправити</button>
+    </form>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+        <caption>технычны характеристики</caption>
+        <tr>
+            <td>Марка авто/характеристики</td>
+            <td>об'єм двигуна</td>
+            <td>Тип приводу</td>
+            <td>вид палива</td>
+        </tr>
+        <tr>
+            <td>Mazda CX-5</td>
+            <td>2.5</td>
+            <td>Full</td>
+            <td>Gasoline</td>
+        </tr>
+        <tr>
+            <td>Ford edge</td>
+            <td>2.5</td>
+            <td>Full</td>
+            <td>Gasoline</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <td colspan="2">Транспотрны засоби</td>
+        </tr>
+        <tr>
+            <th rowspan="3">Автомобілі</th>
+        </tr>
+        <tr>
+            <td>Mazda CX-5</td>
+        </tr>
+        <tr>
+            <td>Ford edge</td>
+        </tr>
+        <tr>
+            <th rowspan="3">Мотоцикли</th>
+        </tr>
+        <tr>
+            <td>Yamaha</td>
+        </tr>
+        <tr>
+            <td>Suzuki</td>
+        </tr>
+
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <audio controls="controls" loop="loop" preload="preload">
+        <source src="audio/music.acc" type="audio/acc">
+        <source src="audio/music.mp3" type="audio/mp3">
+        <source src="audio/music.ogg" type="audio/ogg">
+        <source src="audio/music.wav" type="audio/wav">
+    </audio>
+
+    <video poster="images/video.jpg" width="500" height="280" controls="controls" preload="preload">
+        <source src="video/animals.mp4" type="video/mp4">
+        <source src="video/animals.ogv" type="video/ogv">
+        <source src="video/animals.webm" type="video/webm">
+    </video>
+
+
+
+
+</body>
+
+</html>

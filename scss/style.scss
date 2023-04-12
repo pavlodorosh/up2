@@ -1,0 +1,82 @@
+$col: 130px;
+$row: 90px;
+$font: 14px;
+$index: 5;
+
+@import "mixin";
+
+
+//block-name__elem-name_mod-name_mod-val
+// block-name
+// elem-name
+// mod-name
+// mod-val
+
+
+.grid-container-template-areas {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'header header header header header'
+        '. . . . .'
+        'menu . content . sidebar'
+        '. . . . .'
+        'footer footer footer footer footer';
+    grid-template-columns: $col 5px 1fr 5px $col;
+    grid-template-rows: $row 5px 1fr 5px $row;
+
+    @import "areas";
+
+    .grid-item {
+        &.color_1 {
+            background-color: #673ab7;
+        }
+
+        &.color_2 {
+            background-color: #4caf50;
+        }
+
+        &.color_3 {
+            background-color: #e9a81e;
+        }
+
+        &.color_4 {
+            background-color: #e91e63;
+        }
+        &:hover{
+            border-bottom:3px solid;
+        }
+
+        @include _mobile{
+            border:2px solid;
+        }
+    }
+
+    .grid-item {
+        &-element {
+            background-color: #673ab7;
+
+            &-mod{
+                background-color: #e91e63;
+            }
+        }
+    }
+
+
+    @while $index > 0 {
+        .element-#{$index} {
+            width: mywidth() * $index;
+        }
+        $index: $index - 1;
+    }
+
+}
+.block-name{
+    position: relative;
+    &_elem-name{
+        position: relative;
+        &__mod-name{
+            position: relative;
+        }
+    }
+}

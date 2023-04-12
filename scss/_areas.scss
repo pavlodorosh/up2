@@ -1,0 +1,41 @@
+@mixin contenttest() {
+    position: relative;
+    font-size: 18px;
+    color: #000;
+}
+
+.header {
+    background: #03A9F4;
+    grid-area: header;
+    @include contenttest();
+}
+
+.content {
+    background-color: #FFC107;
+    grid-area: content;
+    @include contenttest();
+}
+
+.menu {
+    background-color: #000;
+    grid-area: menu;
+    @include contenttest();
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #8BC34A;
+    @include contenttest();
+}
+
+.footer {
+    background-color: #9C27B0;
+    grid-area: footer;
+    @include button-color(30px, 50px);
+    @include contenttest();
+    font-size: $font + 2px;
+
+    @include _mobile {
+        border: 2px solid;
+    }
+}
