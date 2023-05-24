@@ -48,13 +48,40 @@
             <div class="grid-item color_2 item-6">color_2</div>
             <div class="grid-item color_3 item-7">color_3</div>
             <div class="grid-item color_4 item-8">color_4</div>
-            <div class="grid-item color_4 item-8">color_4</div>
-            <div class="grid-item color_4 item-8">color_4</div>
         </div>
         <div class="menu menu-1"></div>
         <div class="sidebar block"></div>
         <div class="footer"></div>
     </div>
+
+    <!--
+All Autocomplete
+Auto Complete Tag
+Code Runner
+Import Cost
+
+JavaScript (ES6) code snippets
+jshint
+
+Live Server
+
+Multiple clipboards for VSCode
+Reactjs code snippets
+
+Sass
+
+Theme - Oceanic Next
+vscode-icons
+
+
+Sass
+JavaScript (ES6) code snippets
+jshint
+ESLint
+
+-->
+
+
 
 
 </body>
