@@ -759,20 +759,20 @@
 // set.size – повертає кількість елементів у множині.
 
 
-console.log('**** Рекурсія *****');
+// console.log('**** Рекурсія *****');
 
-function pow(x, n) {
-  let result = 1;
+// function pow(x, n) {
+//   let result = 1;
 
-  // множимо result на x n разів в циклі
-  for (let i = 0; i < n; i++) {
-    result *= x;
-  }
+//   // множимо result на x n разів в циклі
+//   for (let i = 0; i < n; i++) {
+//     result *= x;
+//   }
 
-  return result;
-}
+//   return result;
+// }
 
-console.log(pow(2,8));
+// console.log(pow(2,8));
 // 2*2*2*...2
 // 2*2^7
 // x^y = X*X^Y-1
@@ -781,15 +781,15 @@ console.log(pow(2,8));
 // 2^3 = 8
 // 2 * 2^2 = 8
 
-function powr(x, n) {
-  if (n == 1) {
-    return x;
-  } else {
+// function powr(x, n) {
+//   if (n == 1) {
+//     return x;
+//   } else {
 
-    return x * powr(x, n - 1);
-  }
-}
-console.log(powr(2,8));
+//     return x * powr(x, n - 1);
+//   }
+// }
+// console.log(powr(2,8));
 // powr(2,2);
 // x = 2 n = 2
 // 2 * powr(2, 2-1)
@@ -801,9 +801,9 @@ console.log(powr(2,8));
 // rerutn 2
 
 
-setTimeout(() => {
-  console.log("Delayed for 2 second.");
-}, 2000);
+// setTimeout(() => {
+//   console.log("Delayed for 2 second.");
+// }, 2000);
 
 
 // setInterval(Display, 2000);
@@ -816,11 +816,59 @@ setTimeout(() => {
 // console.log(timerId);
 // clearTimeout(timerId);
 
-let seconds = 1;
-let timerId = setInterval(() => console.log( seconds+++'s'), 1000);
+// let seconds = 1;
+// let timerId = setInterval(() => console.log( seconds+++'s'), 1000);
 
-setTimeout(  () => {
-        clearInterval(timerId);
-        console.log('stop');
-    } ,
-    5000 );
+// setTimeout(  () => {
+//         clearInterval(timerId);
+//         console.log('stop');
+//     } ,
+//     5000 );
+
+//     let image = 123;
+//     console.log(image);
+
+
+// console.log('**** foreach *****');
+
+const arrayL = ['a', 'b', 'c', 'd'];
+const arrayN = [8, 2, 3, 4];
+
+
+// arrayL.forEach(function (currentValue, index, array){
+//   console.log('currentValue = ' + currentValue + ' index = ' + index + ' array = ' + array);
+// });
+
+// arrayL.forEach( (currentValue, index, array) =>  console.log('currentValue = ' + currentValue + ' index = ' + index + ' array = ' + array) );
+// arrayL.forEach( e =>  console.log('currentValue = ' + e ) );
+
+// const allActivities = [
+//  { title: 'My activity', coordinates: [ 50.123, 3.291] },
+//  { title: 'Another activity', coordinates: [ 1.238, 4.292] }
+// ]
+// const allCoordinates = allActivities.map(activity => activity.coordinates);
+// console.log(allCoordinates);
+
+let newArray = arrayN.map( (e) => e * 2);
+console.log(newArray);
+
+let newArray2 = arrayN.map(function (currentValue, index, array){
+  if ( currentValue > 2 ){
+    return currentValue * 3;
+  }
+});
+console.log(newArray2);
+
+console.log(arrayN);
+let totalSum = arrayN.reduce((total,e) => total + e);
+console.log(totalSum);
+
+
+let ifTotal = arrayN.reduce( function(totalValue, currentValue1, index1){
+  if( index1 > 1 ){
+    return totalValue + currentValue1;
+  }
+  return totalValue;
+}, 0 );
+
+console.log('ifTotal = '+ifTotal);
