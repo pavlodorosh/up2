@@ -42,7 +42,7 @@ for( let key in cart) {
     out +=`<div class="col col-md-6 col-lg-4">`;
     out += `<h2>${cart[key]["name"]}</h2>`;
     out += `<img src="${cart[key]["image"]}"> `;
-    out += `<div class="price">${cart[key]["price"]}</div>`;
+    out += `<div class="price">price - ${cart[key]["price"]}</div>`;
     out += `<button class="add_to_cart" data-articul="${key}">Купити</button>`;
     out += `</div>`;
 }
@@ -53,10 +53,10 @@ document.querySelector('.goods').innerHTML = out;
 const data = {};
 
 document.querySelector('.goods').addEventListener('click', event =>{
-    console.log(event);
-    console.log(event.target);
-    console.log(event.target.classList);
-    console.log(event.target.classList.contains('add_to_cart'));
+    // console.log(event);
+    // console.log(event.target);
+    // console.log(event.target.classList);
+    // console.log(event.target.classList.contains('add_to_cart'));
     if(event.target.classList.contains('add_to_cart')){
         let articul = event.target.dataset['articul'];
         console.log(articul);
@@ -66,6 +66,7 @@ document.querySelector('.goods').addEventListener('click', event =>{
             data[articul] = cart[articul];
             data[articul]['count'] = 1;
         }
+        // console.log(data);
         localStorage.setItem('cart', JSON.stringify(data));
     }
 });
