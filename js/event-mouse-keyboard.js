@@ -26,7 +26,7 @@ document.querySelector('.i-1').onkeydown = function (event) {
 
 document.querySelector('.i-1').onkeyup = function (event) {
     console.log('keyup');
-}
+};
 
 document.querySelector('.i-2').onkeypress = function (event) {
     console.log('keypress');
