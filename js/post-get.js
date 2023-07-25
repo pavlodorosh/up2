@@ -1,20 +1,31 @@
 console.log("post-get");
 
+
+////////////////////
 let xttp = new XMLHttpRequest();
-let a = 0;
 xttp.onreadystatechange = function () {
-    console.log(this);
     if(this.readyState == 4 && this.status == 200 ){
-        xttpfunction(this.responseText);
+        xttpfunction(this.response);
     }
 };
-
-xttp.open('GET', 'https://ventapl.dahpro.com.ua/server.php?auth=key2023&action=5&num1=5&num2=1', true);
+// let urlreq = '';
+// let action = 2;
+// urlreq = '?a123=key2023&action='+action;
+// if (action == 2) {
+//     urlreq += '&num1=5&num2=1';
+// }
+// if (action == 5){
+//     urlreq += '&num5=5&num2=1';
+// }
+// xttp.open('GET', 'https://ventapl.dahpro.com.ua/server.php'+urlreq);
+xttp.open('GET', 'https://api.monobank.ua/bank/currency');
 xttp.send();
-
 function xttpfunction(data){
+    console.log("first start function");
     console.log('get',data);
+    console.log("first end function");
 }
+////////////////////
 
 let xttp2 = new XMLHttpRequest();
 xttp2.onreadystatechange = function () {
@@ -32,17 +43,32 @@ function xttpfunction2(data){
     console.log('post',data);
 }
 
+urlreq = '?a123=key2023&action='+action;
+action = 5;
+let bodyreq = '';
+if (action == 2) {
+    bodyreq = {
+        auth: 'key2023',
+        action: '5',
+        num1: 5,
+        num2: 1
+    };
+}
+if (action == 5){
+    bodyreq = {
+        auth: 'key2023',
+        action: '5',
+        num1: 5,
+        num2: 1
+    };
+}
+
 fetch('https://ventapl.dahpro.com.ua/server.php', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
     },
-    body: JSON.stringify({
-        auth: 'key2023',
-        action: '5',
-        num1: 5,
-        num2: 1
-    })
+    body: JSON.stringify(bodyreq)
 })
 .then(response => response.text())
 .then(response => {

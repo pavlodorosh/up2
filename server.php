@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_GET['auth']) && $_GET['auth']=='key2023'){
+if(isset($_GET['a123']) && $_GET['a123']=='key2023'){
     if($_GET['action'] == 1){
         echo 'key OK';
     }
